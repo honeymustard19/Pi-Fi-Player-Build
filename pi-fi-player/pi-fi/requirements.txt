@@ -1,0 +1,9 @@
+kivy==2.3.0
+spotipy==2.23.0
+requests==2.32.3
+Pillow==10.4.0
+waitress==3.0.0
+flask==3.0.3
+qrcode==7.4.2
+python-dotenv==1.0.1
+RPi.GPIO==0.7.1

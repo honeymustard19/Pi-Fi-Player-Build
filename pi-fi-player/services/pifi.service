@@ -1,0 +1,12 @@
+[Unit]
+Description=Pi‑Fi Player UI
+After=graphical.target network-online.target librespot.service
+
+[Service]
+WorkingDirectory=%h/pi-fi-player/pi-fi
+ExecStart=/usr/bin/python3 %h/pi-fi-player/pi-fi/main.py
+Restart=on-failure
+Environment=KIVY_BCM_DISPMANX_ID=0
+
+[Install]
+WantedBy=default.target

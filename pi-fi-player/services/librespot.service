@@ -1,0 +1,16 @@
+[Unit]
+Description=Librespot (Spotify Connect) – Pi-Fi
+After=network-online.target sound.target
+
+[Service]
+ExecStart=%h/librespot-bin/librespot \
+  --name "Pi-Fi Player" \
+  --bitrate 320 \
+  --enable-volume-normalisation \
+  --backend alsa \
+  --device hw:0,0 \
+  --initial-volume 70
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
